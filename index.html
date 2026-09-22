@@ -5,305 +5,756 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Meine Website</title>
+    <meta
+        name="description"
+        content="Meine persönliche Galerie mit Bildern, Projekten und besonderen Momenten."
+    >
+
+    <meta name="theme-color" content="#080b12">
+
+    <title>Meine Galerie</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
 
-    <header class="navbar">
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
 
-        <a href="#home" class="logo">
-            MeineWebsite
+<header class="navbar">
+
+    <a href="#home" class="logo">
+        Meine<span>Galerie</span>
+    </a>
+
+
+    <nav class="desktop-nav">
+
+        <a href="#home" class="active">
+            Home
         </a>
 
+        <a href="#gallery">
+            Galerie
+        </a>
 
-        <!-- DESKTOP NAVIGATION -->
+        <a href="#about">
+            Über mich
+        </a>
 
-        <nav class="desktop-nav">
+        <a href="#contact">
+            Kontakt
+        </a>
 
-            <a href="#home">Home</a>
+    </nav>
 
-            <a href="#features">Features</a>
 
-            <a href="#about">Über uns</a>
+    <button
+        class="menu-button"
+        id="menu-button"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+    >
 
-            <a href="#contact">Kontakt</a>
+        <span></span>
+        <span></span>
+        <span></span>
 
-        </nav>
+    </button>
 
 
-        <!-- MOBILES MENÜ -->
+    <nav
+        class="mobile-nav"
+        id="mobile-nav"
+    >
 
-        <button
-            class="menu-button"
-            id="menu-button"
-            type="button"
-            aria-label="Menü öffnen"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <a href="#home">
+            Home
+        </a>
 
+        <a href="#gallery">
+            Galerie
+        </a>
 
-        <nav
-            class="mobile-nav"
-            id="mobile-nav"
-        >
+        <a href="#about">
+            Über mich
+        </a>
 
-            <a href="#home">Home</a>
+        <a href="#contact">
+            Kontakt
+        </a>
 
-            <a href="#features">Features</a>
+    </nav>
 
-            <a href="#about">Über uns</a>
+</header>
 
-            <a href="#contact">Kontakt</a>
 
-        </nav>
 
-    </header>
+<!-- ==========================================
+     HAUPTBEREICH
+========================================== -->
 
+<main>
 
-    <!-- =========================
-         HAUPTBEREICH
-    ========================== -->
 
-    <main>
+<!-- ==========================================
+     HOME
+========================================== -->
 
+<section
+    id="home"
+    class="hero"
+>
 
-        <!-- HERO -->
+    <div class="hero-content">
 
-        <section id="home" class="hero">
-
-            <div class="hero-content">
-
-                <p class="small-title">
-                    WILLKOMMEN
-                </p>
-
-                <h1>
-                    Deine eigene
-                    <span>Website.</span>
-                </h1>
-
-                <p class="description">
-                    Eine moderne Website,
-                    die komplett selbst erstellt
-                    und später kostenlos
-                    veröffentlicht wird.
-                </p>
-
-                <div class="buttons">
-
-                    <a
-                        href="#features"
-                        class="button primary"
-                    >
-                        Entdecken
-                    </a>
-
-                    <a
-                        href="#about"
-                        class="button secondary"
-                    >
-                        Mehr erfahren
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             FEATURES
-        ========================== -->
-
-        <section
-            id="features"
-            class="features"
-        >
-
-            <h2>
-                Was kann diese Website?
-            </h2>
-
-            <div class="cards">
-
-
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-                        alt="Computertechnik"
-                    >
-
-                    <div class="card-content">
-
-                        <div class="icon">
-                            ⚡
-                        </div>
-
-                        <h3>
-                            Schnell
-                        </h3>
-
-                        <p>
-                            Eine schnelle
-                            und moderne Website
-                            ohne unnötigen Ballast.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80"
-                        alt="Modernes Design"
-                    >
-
-                    <div class="card-content">
-
-                        <div class="icon">
-                            🎨
-                        </div>
-
-                        <h3>
-                            Modern
-                        </h3>
-
-                        <p>
-                            Eigenes Design
-                            mit HTML und CSS,
-                            das wir jederzeit
-                            verändern können.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
-                        alt="Internet und Netzwerk"
-                    >
-
-                    <div class="card-content">
-
-                        <div class="icon">
-                            🌍
-                        </div>
-
-                        <h3>
-                            Online
-                        </h3>
-
-                        <p>
-                            Später veröffentlichen
-                            wir die Website
-                            kostenlos im Internet.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             ÜBER UNS
-        ========================== -->
-
-        <section
-            id="about"
-            class="about"
-        >
-
-            <h2>
-                Über diese Website
-            </h2>
-
-            <p>
-                Diese Website wird
-                Schritt für Schritt
-                selbst programmiert.
-
-                HTML bildet die Struktur,
-                CSS das Design und
-                JavaScript sorgt für
-                interaktive Funktionen.
-            </p>
-
-        </section>
-
-
-        <!-- =========================
-             KONTAKT
-        ========================== -->
-
-        <section
-            id="contact"
-            class="contact"
-        >
-
-            <h2>
-                Kontakt
-            </h2>
-
-            <p>
-                Hier können wir später
-                ein Kontaktformular
-                oder andere Funktionen
-                einbauen.
-            </p>
-
-            <a
-                href="mailto:beispiel@example.com"
-                class="button primary"
-            >
-                Kontakt aufnehmen
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <p>
-            © 2026 MeineWebsite
+        <p class="small-title">
+            WILLKOMMEN IN MEINER GALERIE
         </p>
 
-    </footer>
+
+        <h1>
+            Meine
+            <span>Galerie.</span>
+        </h1>
 
 
-    <!-- JAVASCRIPT -->
+        <p class="description">
+            Eine persönliche Sammlung meiner Bilder,
+            Projekte und besonderen Momente.
+        </p>
 
-    <script src="script.js"></script>
+
+        <div class="buttons">
+
+            <a
+                href="#gallery"
+                class="button primary"
+            >
+                Galerie öffnen
+            </a>
+
+
+            <a
+                href="#about"
+                class="button secondary"
+            >
+                Mehr erfahren
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     GALERIE
+========================================== -->
+
+<section
+    id="gallery"
+    class="gallery-section"
+>
+
+    <div class="section-header">
+
+        <p class="section-label">
+            MEINE SAMMLUNG
+        </p>
+
+        <h2>
+            Galerie
+        </h2>
+
+        <p>
+            Meine Bilder und besonderen Momente.
+        </p>
+
+    </div>
+
+
+
+    <!-- SUCHE -->
+
+    <div class="gallery-tools">
+
+        <div class="search-box">
+
+            <label
+                for="gallery-search"
+                class="visually-hidden"
+            >
+                Galerie durchsuchen
+            </label>
+
+
+            <input
+                type="search"
+                id="gallery-search"
+                placeholder="Bilder durchsuchen..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+
+        <!-- FILTER -->
+
+        <div
+            class="filter-buttons"
+            role="group"
+            aria-label="Galerie filtern"
+        >
+
+            <button
+                type="button"
+                class="filter-button active"
+                data-filter="all"
+            >
+                Alle
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="natur"
+            >
+                Natur
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="landschaft"
+            >
+                Landschaft
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="berge"
+            >
+                Berge
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="wald"
+            >
+                Wald
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- BILDER -->
+
+    <div
+        class="gallery-grid"
+        id="gallery-grid"
+    >
+
+
+        <!-- BILD 1 -->
+
+        <article
+            class="gallery-item"
+            data-category="landschaft"
+            data-title="Landschaft"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=90"
+                alt="Landschaft"
+                loading="lazy"
+            >
+
+
+            <div class="gallery-overlay">
+
+                <div>
+
+                    <span class="gallery-category">
+                        Landschaft
+                    </span>
+
+                    <h3>
+                        Landschaft
+                    </h3>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="view-button"
+                >
+                    Ansehen
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BILD 2 -->
+
+        <article
+            class="gallery-item"
+            data-category="berge"
+            data-title="Berglandschaft"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=90"
+                alt="Berglandschaft"
+                loading="lazy"
+            >
+
+
+            <div class="gallery-overlay">
+
+                <div>
+
+                    <span class="gallery-category">
+                        Berge
+                    </span>
+
+                    <h3>
+                        Berglandschaft
+                    </h3>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="view-button"
+                >
+                    Ansehen
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BILD 3 -->
+
+        <article
+            class="gallery-item"
+            data-category="wald"
+            data-title="Wald"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=90"
+                alt="Wald"
+                loading="lazy"
+            >
+
+
+            <div class="gallery-overlay">
+
+                <div>
+
+                    <span class="gallery-category">
+                        Wald
+                    </span>
+
+                    <h3>
+                        Wald
+                    </h3>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="view-button"
+                >
+                    Ansehen
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BILD 4 -->
+
+        <article
+            class="gallery-item"
+            data-category="natur"
+            data-title="Natur"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=90"
+                alt="Natur"
+                loading="lazy"
+            >
+
+
+            <div class="gallery-overlay">
+
+                <div>
+
+                    <span class="gallery-category">
+                        Natur
+                    </span>
+
+                    <h3>
+                        Natur
+                    </h3>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="view-button"
+                >
+                    Ansehen
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BILD 5 -->
+
+        <article
+            class="gallery-item"
+            data-category="wald"
+            data-title="Waldweg"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=90"
+                alt="Waldweg"
+                loading="lazy"
+            >
+
+
+            <div class="gallery-overlay">
+
+                <div>
+
+                    <span class="gallery-category">
+                        Wald
+                    </span>
+
+                    <h3>
+                        Waldweg
+                    </h3>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="view-button"
+                >
+                    Ansehen
+                </button>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BILD 6 -->
+
+        <article
+            class="gallery-item"
+            data-category="landschaft"
+            data-title="Berg und Landschaft"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1400&q=90"
+                alt="Berg und Landschaft"
+                loading="lazy"
+            >
+
+
+            <div class="gallery-overlay">
+
+                <div>
+
+                    <span class="gallery-category">
+                        Landschaft
+                    </span>
+
+                    <h3>
+                        Berg und Landschaft
+                    </h3>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="view-button"
+                >
+                    Ansehen
+                </button>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- KEINE ERGEBNISSE -->
+
+    <div
+        class="no-results"
+        id="no-results"
+        hidden
+    >
+
+        <div class="no-results-icon">
+            🔎
+        </div>
+
+        <h3>
+            Keine Bilder gefunden
+        </h3>
+
+        <p>
+            Versuche einen anderen Suchbegriff
+            oder wähle eine andere Kategorie.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     ÜBER MICH
+========================================== -->
+
+<section
+    id="about"
+    class="about"
+>
+
+    <div class="section-header">
+
+        <p class="section-label">
+            ÜBER DIE WEBSITE
+        </p>
+
+        <h2>
+            Über mich
+        </h2>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <p>
+            Willkommen auf meiner persönlichen Galerie.
+        </p>
+
+        <p>
+            Hier sammle und präsentiere ich Bilder,
+            Projekte und kreative Arbeiten.
+        </p>
+
+        <p>
+            Die Website wird selbst programmiert
+            und Schritt für Schritt erweitert.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     KONTAKT
+========================================== -->
+
+<section
+    id="contact"
+    class="contact"
+>
+
+    <div class="section-header">
+
+        <p class="section-label">
+            KONTAKT
+        </p>
+
+        <h2>
+            Kontakt
+        </h2>
+
+        <p>
+            Dieser Bereich kann später
+            erweitert werden.
+        </p>
+
+    </div>
+
+
+    <a
+        href="mailto:beispiel@example.com"
+        class="button primary"
+    >
+        E-Mail schreiben
+    </a>
+
+</section>
+
+</main>
+
+
+
+<!-- ==========================================
+     LIGHTBOX
+========================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true"
+>
+
+
+    <button
+        type="button"
+        class="lightbox-close"
+        id="lightbox-close"
+        aria-label="Bild schließen"
+    >
+        ×
+    </button>
+
+
+    <button
+        type="button"
+        class="lightbox-navigation lightbox-previous"
+        id="lightbox-previous"
+        aria-label="Vorheriges Bild"
+    >
+        ‹
+    </button>
+
+
+    <div class="lightbox-content">
+
+        <img
+            id="lightbox-image"
+            src=""
+            alt=""
+        >
+
+
+        <div class="lightbox-info">
+
+            <span
+                id="lightbox-category"
+            ></span>
+
+
+            <h3
+                id="lightbox-title"
+            ></h3>
+
+        </div>
+
+    </div>
+
+
+    <button
+        type="button"
+        class="lightbox-navigation lightbox-next"
+        id="lightbox-next"
+        aria-label="Nächstes Bild"
+    >
+        ›
+    </button>
+
+</div>
+
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <strong>
+                Meine<span>Galerie</span>
+            </strong>
+
+            <p>
+                Meine persönliche Bildergalerie.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p>
+                © 2026 Meine Galerie
+            </p>
+
+            <p>
+                Selbst programmiert mit
+                HTML, CSS und JavaScript.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
 

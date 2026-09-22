@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Admin – Meine Galerie
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================================= -->
+    <!-- LOGIN -->
+    <!-- ================================================= -->
+
+    <div
+        id="login-screen"
+        class="login-screen"
+    >
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                ✦
+            </div>
+
+            <h1>
+                Meine Galerie
+            </h1>
+
+            <p class="login-subtitle">
+                Administrationsbereich
+            </p>
+
+
+            <form id="login-form">
+
+                <label for="username">
+                    Benutzername
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Benutzername"
+                    autocomplete="username"
+                    required
+                >
+
+
+                <label for="password">
+                    Passwort
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Passwort"
+                    autocomplete="current-password"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Einloggen
+                </button>
+
+
+                <p
+                    id="login-error"
+                    class="error-message"
+                ></p>
+
+            </form>
+
+
+            <a
+                href="/"
+                class="back-link"
+            >
+                ← Zur Website
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- ADMIN APP -->
+    <!-- ================================================= -->
+
+    <div
+        id="admin-app"
+        class="admin-app hidden"
+    >
+
+
+        <!-- ================================================= -->
+        <!-- SIDEBAR -->
+        <!-- ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <div class="sidebar-logo">
+
+                <span>
+                    ✦
+                </span>
+
+                <strong>
+                    Meine Galerie
+                </strong>
+
+            </div>
+
+
+            <nav>
+
+
+                <button
+                    class="nav-item active"
+                    data-section="dashboard"
+                    type="button"
+                >
+                    🏠 Dashboard
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="texts"
+                    type="button"
+                >
+                    ✏️ Texte
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="upload"
+                    type="button"
+                >
+                    ⬆️ Bild hochladen
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="gallery"
+                    type="button"
+                >
+                    🖼️ Galerie
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="categories"
+                    type="button"
+                >
+                    🗂️ Kategorien
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="backups"
+                    type="button"
+                >
+                    💾 Backups
+                </button>
+
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+
+                <a
+                    href="/"
+                    target="_blank"
+                    class="sidebar-link"
+                >
+                    🌐 Website öffnen
+                </a>
+
+
+                <button
+                    id="logout-button"
+                    class="logout-button"
+                    type="button"
+                >
+                    🚪 Abmelden
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- ================================================= -->
+        <!-- MOBILE HEADER -->
+        <!-- ================================================= -->
+
+        <header class="mobile-header">
+
+            <button
+                id="mobile-menu-button"
+                type="button"
+            >
+                ☰
+            </button>
+
+            <strong>
+                Meine Galerie
+            </strong>
+
+        </header>
+
+
+        <div
+            id="mobile-nav-overlay"
+            class="mobile-nav-overlay"
+        ></div>
+
+
+
+        <!-- ================================================= -->
+        <!-- MAIN -->
+        <!-- ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- ================================================= -->
+            <!-- DASHBOARD -->
+            <!-- ================================================= -->
+
+            <section
+                id="section-dashboard"
+                class="admin-section active"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            ÜBERSICHT
+                        </span>
+
+                        <h1>
+                            Dashboard
+                        </h1>
+
+                        <p>
+                            Verwalte deine Galerie bequem über diesen Bereich.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            🖼️
+                        </span>
+
+                        <span
+                            class="stat-number"
+                            id="stat-images"
+                        >
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Bilder
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            🗂️
+                        </span>
+
+                        <span
+                            class="stat-number"
+                            id="stat-categories"
+                        >
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Kategorien
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            ✏️
+                        </span>
+
+                        <span class="stat-number">
+                            6
+                        </span>
+
+                        <span class="stat-label">
+                            Texte
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            📂
+                        </span>
+
+                        <span
+                            class="stat-number"
+                            id="stat-uncategorized"
+                        >
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Ohne Kategorie
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Schnellzugriff
+                    </h2>
+
+
+                    <div class="quick-actions">
+
+
+                        <button
+                            class="quick-action"
+                            data-section="upload"
+                            type="button"
+                        >
+
+                            <span>
+                                ⬆️
+                            </span>
+
+                            <strong>
+                                Bild hochladen
+                            </strong>
+
+                            <small>
+                                Neues Bild zur Galerie hinzufügen
+                            </small>
+
+                        </button>
+
+
+                        <button
+                            class="quick-action"
+                            data-section="texts"
+                            type="button"
+                        >
+
+                            <span>
+                                ✏️
+                            </span>
+
+                            <strong>
+                                Texte bearbeiten
+                            </strong>
+
+                            <small>
+                                Texte der Website ändern
+                            </small>
+
+                        </button>
+
+
+                        <button
+                            class="quick-action"
+                            data-section="categories"
+                            type="button"
+                        >
+
+                            <span>
+                                🗂️
+                            </span>
+
+                            <strong>
+                                Kategorien verwalten
+                            </strong>
+
+                            <small>
+                                Kategorien erstellen oder ändern
+                            </small>
+
+                        </button>
+
+
+                        <button
+                            class="quick-action"
+                            data-section="backups"
+                            type="button"
+                        >
+
+                            <span>
+                                💾
+                            </span>
+
+                            <strong>
+                                Backups verwalten
+                            </strong>
+
+                            <small>
+                                Daten und Bilder sichern
+                            </small>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================================================= -->
+            <!-- TEXTE -->
+            <!-- ================================================= -->
+
+            <section
+                id="section-texts"
+                class="admin-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            WEBSITE
+                        </span>
+
+                        <h1>
+                            Texte bearbeiten
+                        </h1>
+
+                        <p>
+                            Ändere hier die sichtbaren Texte deiner Website.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="settings-form"
+                    class="form-card"
+                >
+
+
+                    <div class="form-group">
+
+                        <label for="site-name">
+                            Website-Name
+                        </label>
+
+                        <input
+                            id="site-name"
+                            type="text"
+                            placeholder="Meine Galerie"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="hero-title">
+                            Überschrift
+                        </label>
+
+                        <input
+                            id="hero-title"
+                            type="text"
+                            placeholder="Willkommen in meiner Galerie"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="hero-text">
+                            Hero-Text
+                        </label>
+
+                        <textarea
+                            id="hero-text"
+                            rows="4"
+                            placeholder="Entdecke meine schönsten Bilder."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="about-text">
+                            Über mich / Über die Galerie
+                        </label>
+
+                        <textarea
+                            id="about-text"
+                            rows="5"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-text">
+                            Kontakt-Text
+                        </label>
+
+                        <textarea
+                            id="contact-text"
+                            rows="4"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="footer-text">
+                            Footer
+                        </label>
+
+                        <input
+                            id="footer-text"
+                            type="text"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        💾 Änderungen speichern
+                    </button>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- ================================================= -->
+            <!-- BILD HOCHLADEN -->
+            <!-- ================================================= -->
+
+            <section
+                id="section-upload"
+                class="admin-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            GALERIE
+                        </span>
+
+                        <h1>
+                            Bild hochladen
+                        </h1>
+
+                        <p>
+                            Füge ein neues Bild zu deiner Galerie hinzu.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="upload-form"
+                    class="form-card"
+                    enctype="multipart/form-data"
+                >
+
+
+                    <div
+                        id="drop-zone"
+                        class="drop-zone"
+                    >
+
+                        <div class="drop-icon">
+                            ⬆️
+                        </div>
+
+                        <h2>
+                            Bild auswählen
+                        </h2>
+
+                        <p>
+                            JPG, PNG oder WEBP · maximal 10 MB
+                        </p>
+
+
+                        <label
+                            for="image-file"
+                            class="file-button"
+                        >
+                            Datei auswählen
+                        </label>
+
+
+                        <input
+                            type="file"
+                            id="image-file"
+                            name="image"
+                            accept="image/jpeg,image/png,image/webp"
+                            hidden
+                            required
+                        >
+
+
+                        <div
+                            id="file-name"
+                            class="file-name"
+                        ></div>
+
+                    </div>
+
+
+
+                    <div
+                        id="image-preview-container"
+                        class="image-preview-container hidden"
+                    >
+
+                        <img
+                            id="image-preview"
+                            src=""
+                            alt="Vorschau"
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="upload-title">
+                            Titel
+                        </label>
+
+                        <input
+                            type="text"
+                            id="upload-title"
+                            name="title"
+                            placeholder="Mein Bild"
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="upload-description">
+                            Beschreibung
+                        </label>
+
+                        <textarea
+                            id="upload-description"
+                            name="description"
+                            rows="4"
+                            placeholder="Beschreibung des Bildes..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="upload-category">
+                            Kategorie
+                        </label>
+
+                        <select
+                            id="upload-category"
+                            name="category"
+                        >
+
+                            <option value="">
+                                Keine Kategorie
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        ⬆️ Bild hochladen
+                    </button>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- ================================================= -->
+            <!-- GALERIE -->
+            <!-- ================================================= -->
+
+            <section
+                id="section-gallery"
+                class="admin-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            VERWALTUNG
+                        </span>
+
+                        <h1>
+                            Galerie
+                        </h1>
+
+                        <p>
+                            Bearbeite oder lösche deine Bilder.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="toolbar">
+
+
+                    <input
+                        id="gallery-search"
+                        type="search"
+                        placeholder="🔍 Bilder suchen..."
+                    >
+
+
+                    <select
+                        id="gallery-category-filter"
+                    >
+
+                        <option value="">
+                            Alle Kategorien
+                        </option>
+
+                    </select>
+
+
+                </div>
+
+
+
+                <div
+                    id="gallery"
+                    class="admin-gallery"
+                ></div>
+
+
+
+                <div
+                    id="gallery-empty"
+                    class="empty-state hidden"
+                >
+
+                    <span>
+                        🖼️
+                    </span>
+
+                    <h2>
+                        Keine Bilder gefunden
+                    </h2>
+
+                    <p>
+                        Lade dein erstes Bild hoch.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================================================= -->
+            <!-- KATEGORIEN -->
+            <!-- ================================================= -->
+
+            <section
+                id="section-categories"
+                class="admin-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            ORGANISATION
+                        </span>
+
+                        <h1>
+                            Kategorien
+                        </h1>
+
+                        <p>
+                            Organisiere deine Bilder mit Kategorien.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="category-create-card">
+
+                    <form id="category-form">
+
+
+                        <input
+                            id="category-name"
+                            type="text"
+                            placeholder="Neue Kategorie..."
+                            required
+                        >
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            + Erstellen
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+
+
+                <div
+                    id="categories-list"
+                    class="categories-list"
+                ></div>
+
+
+            </section>
+
+
+
+            <!-- ================================================= -->
+            <!-- BACKUPS -->
+            <!-- ================================================= -->
+
+            <section
+                id="section-backups"
+                class="admin-section"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            SICHERHEIT
+                        </span>
+
+                        <h1>
+                            Backups
+                        </h1>
+
+                        <p>
+                            Verwalte die automatischen Sicherungen deiner Galerie.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            💾
+                        </span>
+
+                        <span
+                            class="stat-number"
+                            id="backup-data-count"
+                        >
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Daten-Backups
+                        </span>
+
+                        <small>
+                            Maximum:
+                            <span id="backup-data-limit">
+                                30
+                            </span>
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            🖼️
+                        </span>
+
+                        <span
+                            class="stat-number"
+                            id="backup-image-count"
+                        >
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Bild-Backups
+                        </span>
+
+                        <small>
+                            Maximum:
+                            <span id="backup-image-limit">
+                                1000
+                            </span>
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Manuelles Backup
+                            </h2>
+
+                            <p>
+                                Erstellt sofort eine Sicherung deiner Daten und Bilder.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            id="create-backup-button"
+                            type="button"
+                            class="primary-button"
+                        >
+                            💾 Backup jetzt erstellen
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Daten-Backups
+                    </h2>
+
+                    <p>
+                        Gespeicherte Versionen deiner Galerie-Daten.
+                    </p>
+
+
+                    <div
+                        id="data-backups-list"
+                        class="backups-list"
+                    ></div>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <h2>
+                        Bild-Backups
+                    </h2>
+
+                    <p>
+                        Automatische Sicherungen deiner hochgeladenen Bilder.
+                    </p>
+
+
+                    <div
+                        id="image-backups-list"
+                        class="backups-list"
+                    ></div>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- EDIT-MODAL -->
+    <!-- ================================================= -->
+
+    <div
+        id="edit-modal"
+        class="modal hidden"
+    >
+
+
+        <div class="modal-background"></div>
+
+
+        <div class="modal-card">
+
+
+            <div class="modal-header">
+
+                <h2>
+                    Bild bearbeiten
+                </h2>
+
+
+                <button
+                    id="close-modal"
+                    class="close-button"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <form id="edit-form">
+
+
+                <input
+                    type="hidden"
+                    id="edit-id"
+                >
+
+
+                <div
+                    id="edit-preview-container"
+                    class="image-preview-container"
+                >
+
+                    <img
+                        id="edit-preview-image"
+                        src=""
+                        alt="Bildvorschau"
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="edit-title">
+                        Titel
+                    </label>
+
+                    <input
+                        id="edit-title"
+                        type="text"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="edit-description">
+                        Beschreibung
+                    </label>
+
+                    <textarea
+                        id="edit-description"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="edit-category">
+                        Kategorie
+                    </label>
+
+                    <select
+                        id="edit-category"
+                    >
+
+                        <option value="">
+                            Keine Kategorie
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="modal-actions">
+
+
+                    <button
+                        type="button"
+                        id="cancel-edit"
+                        class="secondary-button"
+                    >
+                        Abbrechen
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        💾 Speichern
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- TOAST -->
+    <!-- ================================================= -->
+
+    <div
+        id="toast"
+        class="toast hidden"
+    ></div>
+
+
+
+    <!-- ================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================================= -->
+
+    <script src="/admin.js"></script>
+
+
+</body>
+
+</html>

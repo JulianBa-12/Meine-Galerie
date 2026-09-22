@@ -1,0 +1,31 @@
+# Secrets
+.env
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local data / database
+data.json
+storage/
+
+# Uploads and backups
+public/uploads/
+backups/
+backup-vor-ausbau/
+backup-vor-gesamt-Upgrade/
+
+# Local backup files
+server.js-sicherung-vor-env
+package.json-vor-railway
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

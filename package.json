@@ -1,0 +1,27 @@
+{
+  "name": "meine-galerie",
+  "version": "1.0.0",
+  "description": "Meine persönliche Galerie",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "multer": "^2.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulianBa-12/Meine-Galerie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulianBa-12/Meine-Galerie/issues"
+  },
+  "homepage": "https://github.com/JulianBa-12/Meine-Galerie#readme"
+}

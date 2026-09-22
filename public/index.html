@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Meine Galerie</title>
+
+<meta
+    name="description"
+    content="Eine persönliche Galerie mit meinen schönsten Bildern."
+>
+
+<link rel="stylesheet" href="/style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="#home"
+            class="logo"
+            id="nav-logo"
+        >
+            Meine Galerie
+        </a>
+
+        <button
+            class="mobile-menu-button"
+            id="mobile-menu-button"
+            type="button"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav
+            class="nav-links"
+            id="nav-links"
+        >
+
+            <a
+                href="#home"
+                class="nav-link active"
+            >
+                Start
+            </a>
+
+            <a
+                href="#gallery"
+                class="nav-link"
+            >
+                Galerie
+            </a>
+
+            <a
+                href="#about"
+                class="nav-link"
+            >
+                Über mich
+            </a>
+
+            <a
+                href="#contact"
+                class="nav-link"
+            >
+                Kontakt
+            </a>
+
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Farbschema wechseln"
+            >
+                ☀️
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HAUPTINHALT
+====================================================== -->
+
+<main>
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div
+            class="hero-decoration hero-decoration-1"
+            aria-hidden="true"
+        ></div>
+
+        <div
+            class="hero-decoration hero-decoration-2"
+            aria-hidden="true"
+        ></div>
+
+        <div class="hero-content">
+
+            <div class="section-label">
+                ✦ WILLKOMMEN
+            </div>
+
+            <h1 id="hero-title">
+                Willkommen in meiner Galerie
+            </h1>
+
+            <p id="hero-text">
+                Entdecke meine schönsten Bilder.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#gallery"
+                    class="button button-primary"
+                >
+                    Galerie entdecken
+                </a>
+
+                <a
+                    href="#about"
+                    class="button button-secondary"
+                >
+                    Mehr erfahren
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         GALERIE
+    ================================================== -->
+
+    <section
+        class="gallery-section"
+        id="gallery"
+    >
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                ✧ MEINE BILDER
+            </div>
+
+            <h2>
+                Galerie
+            </h2>
+
+            <p>
+                Eine Auswahl meiner Bilder.
+            </p>
+
+        </div>
+
+
+        <!-- Suche -->
+
+        <div class="gallery-tools">
+
+            <label
+                class="search-box"
+                for="gallery-search"
+            >
+
+                <span aria-hidden="true">
+                    🔎
+                </span>
+
+                <input
+                    type="search"
+                    id="gallery-search"
+                    placeholder="Bilder durchsuchen..."
+                    autocomplete="off"
+                    aria-label="Galerie durchsuchen"
+                >
+
+            </label>
+
+        </div>
+
+
+        <!-- Kategorien -->
+
+        <div
+            class="gallery-filters"
+            id="filters"
+            aria-label="Galeriekategorien"
+        >
+
+            <button
+                class="filter-button active"
+                data-filter="all"
+                type="button"
+            >
+                Alle
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             GALERIE-GRID
+
+             WICHTIG:
+             ID ist jetzt "gallery-grid".
+             Dadurch ist #gallery eindeutig die Section.
+        ================================================== -->
+
+        <div
+            class="gallery-grid"
+            id="gallery-grid"
+            aria-live="polite"
+        >
+            <!-- Wird automatisch über die API gefüllt -->
+        </div>
+
+
+        <!-- Keine Bilder / keine Suchergebnisse -->
+
+        <div
+            class="gallery-empty"
+            id="gallery-empty"
+            hidden
+        >
+
+            <div
+                class="empty-icon"
+                aria-hidden="true"
+            >
+                🖼️
+            </div>
+
+            <h3 id="gallery-empty-title">
+                Noch keine Bilder
+            </h3>
+
+            <p id="gallery-empty-text">
+                Im Adminbereich kannst du Bilder hinzufügen.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ÜBER MICH
+    ================================================== -->
+
+    <section
+        class="about-section"
+        id="about"
+    >
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                ✦ ÜBER MICH
+            </div>
+
+            <h2>
+                Über mich
+            </h2>
+
+        </div>
+
+        <div class="about-card">
+
+            <div
+                class="about-icon"
+                aria-hidden="true"
+            >
+                ✦
+            </div>
+
+            <div>
+
+                <p id="about-text">
+                    Hier findest du eine Auswahl meiner Bilder.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         KONTAKT
+    ================================================== -->
+
+    <section
+        class="contact-section"
+        id="contact"
+    >
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                ✧ KONTAKT
+            </div>
+
+            <h2>
+                Kontakt
+            </h2>
+
+        </div>
+
+        <div class="contact-card">
+
+            <div
+                class="contact-icon"
+                aria-hidden="true"
+            >
+                ✉
+            </div>
+
+            <div>
+
+                <p id="contact-text">
+                    Du möchtest mich kontaktieren?
+                    Schreib mir gerne.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     LIGHTBOX
+====================================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Bildansicht"
+>
+
+    <button
+        class="lightbox-close"
+        id="lightbox-close"
+        type="button"
+        aria-label="Bildansicht schließen"
+    >
+        ×
+    </button>
+
+
+    <button
+        class="lightbox-prev"
+        id="lightbox-prev"
+        type="button"
+        aria-label="Vorheriges Bild"
+    >
+        ‹
+    </button>
+
+
+    <div class="lightbox-content">
+
+        <img
+            id="lightbox-image"
+            src=""
+            alt=""
+        >
+
+        <div class="lightbox-info">
+
+            <h3 id="lightbox-title"></h3>
+
+            <p id="lightbox-description"></p>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="lightbox-next"
+        id="lightbox-next"
+        type="button"
+        aria-label="Nächstes Bild"
+    >
+        ›
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     BENACHRICHTIGUNG
+====================================================== -->
+
+<div
+    class="notification"
+    id="notification"
+    role="status"
+    aria-live="polite"
+>
+
+    <span id="notification-message"></span>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div
+            class="footer-logo"
+            id="footer-logo"
+        >
+            Meine Galerie
+        </div>
+
+        <p id="footer-text">
+            © 2026 Meine Galerie
+        </p>
+
+        <a
+            href="/admin"
+            class="admin-link"
+        >
+            Admin
+        </a>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="/script.js"></script>
+```
+
+</body>
+</html>
