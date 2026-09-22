@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meine Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            MeineWebsite
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="desktop-nav">
+
+            <a href="#home">Home</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#about">Über uns</a>
+
+            <a href="#contact">Kontakt</a>
+
+        </nav>
+
+
+        <!-- MOBILES MENÜ -->
+
+        <button
+            class="menu-button"
+            id="menu-button"
+            type="button"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <nav
+            class="mobile-nav"
+            id="mobile-nav"
+        >
+
+            <a href="#home">Home</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#about">Über uns</a>
+
+            <a href="#contact">Kontakt</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HAUPTBEREICH
+    ========================== -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    WILLKOMMEN
+                </p>
+
+                <h1>
+                    Deine eigene
+                    <span>Website.</span>
+                </h1>
+
+                <p class="description">
+                    Eine moderne Website,
+                    die komplett selbst erstellt
+                    und später kostenlos
+                    veröffentlicht wird.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="#features"
+                        class="button primary"
+                    >
+                        Entdecken
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="button secondary"
+                    >
+                        Mehr erfahren
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <section
+            id="features"
+            class="features"
+        >
+
+            <h2>
+                Was kann diese Website?
+            </h2>
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                        alt="Computertechnik"
+                    >
+
+                    <div class="card-content">
+
+                        <div class="icon">
+                            ⚡
+                        </div>
+
+                        <h3>
+                            Schnell
+                        </h3>
+
+                        <p>
+                            Eine schnelle
+                            und moderne Website
+                            ohne unnötigen Ballast.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80"
+                        alt="Modernes Design"
+                    >
+
+                    <div class="card-content">
+
+                        <div class="icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            Modern
+                        </h3>
+
+                        <p>
+                            Eigenes Design
+                            mit HTML und CSS,
+                            das wir jederzeit
+                            verändern können.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+                        alt="Internet und Netzwerk"
+                    >
+
+                    <div class="card-content">
+
+                        <div class="icon">
+                            🌍
+                        </div>
+
+                        <h3>
+                            Online
+                        </h3>
+
+                        <p>
+                            Später veröffentlichen
+                            wir die Website
+                            kostenlos im Internet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ÜBER UNS
+        ========================== -->
+
+        <section
+            id="about"
+            class="about"
+        >
+
+            <h2>
+                Über diese Website
+            </h2>
+
+            <p>
+                Diese Website wird
+                Schritt für Schritt
+                selbst programmiert.
+
+                HTML bildet die Struktur,
+                CSS das Design und
+                JavaScript sorgt für
+                interaktive Funktionen.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             KONTAKT
+        ========================== -->
+
+        <section
+            id="contact"
+            class="contact"
+        >
+
+            <h2>
+                Kontakt
+            </h2>
+
+            <p>
+                Hier können wir später
+                ein Kontaktformular
+                oder andere Funktionen
+                einbauen.
+            </p>
+
+            <a
+                href="mailto:beispiel@example.com"
+                class="button primary"
+            >
+                Kontakt aufnehmen
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 MeineWebsite
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
