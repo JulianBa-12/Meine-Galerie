@@ -13,7 +13,7 @@ const app = express();
 // KONFIGURATION
 // ==========================================
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const PUBLIC_DIR =
     path.join(__dirname, "public");
@@ -413,7 +413,7 @@ app.use(
                 "lax",
 
             secure:
-                false,
+                process.env.NODE_ENV === "production",
 
             maxAge:
                 1000 *
